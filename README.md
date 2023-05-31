@@ -3,14 +3,16 @@ Este é um pequeno programa em Python que utiliza a biblioteca Tkinter para cria
 
 # Explicação:
 
-• _Importação dos módulos:_
+<li><i>Importação dos módulos:</i></li>
+<br>
 
     import tkinter as tk
     import random
     
 Essas linhas importam os módulos **"tkinter"** e **"random"**. O **"tkinter"** é usado para criar a interface gráfica, enquanto o **"random"** é usado para gerar números aleatórios.
 
-• _Criação da janela principal:_
+<li><i>Criação da janela principal:</i></li>
+<br>
 
     root = tk.Tk()
     root.geometry('250x250')
@@ -18,7 +20,8 @@ Essas linhas importam os módulos **"tkinter"** e **"random"**. O **"tkinter"** 
 
 Essas linhas criam a janela principal. A função **"tk.Tk()"** cria a instância da janela e **"root"** é o nome dessa instância. **"root.geometry('250x250')"** define a geometria da janela para ter uma largura de 250 pixels e uma altura de 250 pixels. **"root.configure(bg="#00b8f8")"** define  cor de fundo da janela como "#00b8f8".
 
-• _Função **"hover()"**:_
+<li><i>Função <b>"hover()"</b></i>:</li>
+<br>
 
     def hover(event):
     x = random.randint(0, 200)
@@ -28,7 +31,8 @@ Essas linhas criam a janela principal. A função **"tk.Tk()"** cria a instânci
     
 Essa função é chamada quando o evento **"< Enter >"** ocorre, que é quando o mouse é passado sobre o botão "Não". Ela gera coordenadas aleatórias (**x** e **y**) e move o botão "Não" para essas coordenadas usando **"nao.place(x=x, y=y)"**.
 
-• _Função **"mensagem()"**:_
+<li><i>Função <b>"mensagem()"</b></i>:</li>
+<br>
   
     def mensagem():
     message = tk.Label(root, text='Me passa um pix?', bg='#00b8f8', font=("Arial", 10, "bold"))
@@ -36,14 +40,16 @@ Essa função é chamada quando o evento **"< Enter >"** ocorre, que é quando o
     
 Essa função é chamada quando o botão "Sim" é clicado. Ela cria um rótulo **"(Label)"** chamado **"message"** com o texto "Me passa um pix?" e personaliza sua aparência com uma cor de fundo **"bg='#00b8f8'"** e uma fonte **"font=("Arial", 10, "bold")"**. Em seguida, o rótulo é colocado na janela nas coordenadas **"(70, 120)"** usando **"message.place(x=70, y=120, relx=0, rely=0)"**.
 
-• _Label **"pergunta":**_
+<li></i>Label <b>"pergunta":</b></i></li>
+<br>
 
     pergunta = tk.Label(root, text='Manda <3', bg='#00b8f8', font=("Arial", 11, "bold"))
     pergunta.pack(pady=20)
     
 Essas linhas criam um rótulo **"(Label)"** chamado **"pergunta"** com o texto "Manda <3" e personalizam sua aparência com uma cor de fundo **"bg='#00b8f8'"** e uma fonte **"font=("Arial", 11, "bold")"**. Em seguida, o rótulo é embalado **"(pack())"** na janela com um preenchimento vertical de **"20"** pixels **"(pady=20)"**.
 
-• _Botões **"nao"** e **"sim"**:_
+<li><i>Botões <b>"nao"</b> e <b>"sim"</b>:</i></li>
+<br>
 
     nao = tk.Button(root, text='Não', bg='#fffbf3')
     nao.place(x=140, y=80) 
@@ -56,7 +62,8 @@ Essas linhas criam dois botões, **"nao"** e **"sim"**. O botão **"nao"** exibe
 
 O botão sim exibe o texto **"Sim"** e também tem uma cor de fundo **"bg='#fffbf3'".** Ele é posicionado nas coordenadas **(25, 80)** usando **"sim.place(x=25, y=80, relx=0, rely=0)"**. Quando o botão **sim** é clicado, a função **mensagem()** é chamada.
 
-• _Loop principal:_
+<li><i>Loop principal:</i></li>
+<br>
 
     root.mainloop()
 
